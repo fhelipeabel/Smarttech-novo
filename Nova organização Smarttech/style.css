@@ -1,0 +1,127 @@
+/* ==============================
+   América Smarttech — CSS unificado
+   (cores, tipografia e componentes)
+   ============================== */
+
+/* Tokens / Variáveis */
+:root{
+  --primary:#0E4D7A;
+  --primary-600:#0B3E62;
+  --accent:#1BB3A7;
+  --accent-600:#159687;
+  --ink:#0B2C4A;
+  --muted:#4E6B84;
+  --bg:#F7FBFF;
+  --card:#FFFFFF;
+  --ring:rgba(27,179,167,.35);
+  --shadow:0 8px 24px rgba(14,77,122,.12);
+  --radius:18px;
+  --max:1600px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
+  color:var(--ink);
+  background: radial-gradient(1200px 600px at 85% -10%, rgba(27,179,167,.12), transparent), var(--bg);
+  min-width:100vw; width:100vw; overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--max);margin-inline:auto;padding-inline:24px;width:100%}
+.full-width{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;padding-left:0;padding-right:0}
+
+/* Seções genéricas */
+section{padding:84px 0}
+section h2{font-size:36px;line-height:1.15;margin:0 0 14px}
+.section-lead{color:var(--muted);max-width:760px}
+
+/* Grids e cartões */
+.grid{display:grid;gap:22px}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid rgba(14,77,122,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.icon{width:28px;height:28px;margin-bottom:10px;color:var(--accent)}
+
+/* Chips/badges utilitários (caso necessários fora da Hero) */
+.badges{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.badge{background:#fff;border:1px solid rgba(14,77,122,.12);border-radius:999px;padding:8px 12px;font-weight:600;color:var(--primary-600)}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(14,77,122,.08);font-weight:600;color:var(--primary-600)}
+.center{text-align:center}
+
+/* FAQ */
+.faq{max-width:820px}
+details{background:#fff;border:1px solid rgba(14,77,122,.12);border-radius:14px;padding:16px 18px}
+details+details{margin-top:12px}
+details[open]{box-shadow:var(--shadow)}
+summary{cursor:pointer;font-weight:700;color:var(--primary-600)}
+
+/* Depoimentos */
+.testimonials{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 12px);gap:24px;overflow:auto;padding-bottom:6px}
+.quote{font-size:16px;color:var(--ink)}
+.person{margin-top:10px;color:var(--muted);font-weight:600}
+
+/* Contato */
+form{display:grid;gap:12px;max-width:640px}
+label{font-weight:600;color:var(--primary-600)}
+input, textarea{padding:12px 14px;border:1.5px solid rgba(14,77,122,.2);border-radius:12px;font:inherit}
+input:focus, textarea:focus{outline:3px solid var(--ring);border-color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.contact-card{background:#fff;border:1px solid rgba(14,77,122,.12);border-radius:var(--radius);padding:18px}
+
+/* Footer (caso use seu bloco de footer em vez do do tema) */
+footer{background:linear-gradient(180deg,#EFF7FB,#E6F9F6);border-top:1px solid rgba(14,77,122,.08);padding:40px 0}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:20px}
+.foot h4{margin:0 0 10px;color:var(--primary-600)}
+.foot a{color:var(--ink)}
+.copyright{margin-top:24px;color:var(--muted);font-size:14px}
+
+/* Barrinha gradiente */
+.barra-smarttech{
+  width:100%;
+  height:5px;
+  background:linear-gradient(315deg,#0B3E62 0%,#0E4D7A 20%,#1BB3A7 60%,#24D0BE 80%,#A0F1E4 100%);
+  border-radius:8px;
+  margin:0;
+  box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+
+/* ===================
+   HERO (as-hero)
+   =================== */
+.as-hero{padding:12px 0;background:radial-gradient(1200px 600px at 85% -10%, rgba(27,179,167,.12), transparent)}
+.as-hero__container{max-width:var(--max);margin-inline:auto;padding-inline:24px}
+.as-hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.as-hero__eyebrow{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:8px 12px;border-radius:999px;background:rgba(27,179,167,.12);color:#159687;font-weight:700;font-size:14px;line-height:1}
+.as-hero__title{margin:14px 0 12px;font:800 clamp(28px,3.8vw + 8px,44px)/1.08 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:-.3px;color:var(--ink)}
+.as-hero__title .as-primary{color:var(--primary)}
+.as-hero__title .as-accent{color:var(--accent)}
+.as-hero__lead{font-size:18px;color:var(--muted);max-width:720px}
+.as-hero__badges{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.as-hero__badge{background:#fff;border:1px solid rgba(14,77,122,.12);border-radius:999px;padding:8px 12px;font-weight:600;color:#0B3E62}
+.as-hero__actions{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap}
+.as-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:var(--shadow);cursor:pointer}
+.as-btn--primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff}
+.as-btn--outline{background:transparent;color:var(--primary);border:2px solid var(--primary);box-shadow:none}
+.as-hero__art{position:relative}
+.as-hero__blob{position:absolute;inset:auto -40px -40px auto;width:220px;height:220px;background:radial-gradient(closest-side, rgba(27,179,167,.25), transparent);border-radius:50%}
+.as-gear{animation:as-spin 16s linear infinite;transform-origin:center}
+.as-gear--sm{animation-duration:12s}
+.as-float{animation:as-float 6s ease-in-out infinite}
+@keyframes as-spin{to{transform:rotate(360deg)}}
+@keyframes as-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* Responsivo */
+@media (max-width:980px){
+  .grid.cols-3{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .testimonials{grid-auto-columns:85%}
+  .foot{grid-template-columns:1fr 1fr}
+  .as-hero__grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .grid.cols-3{grid-template-columns:1fr}
+}

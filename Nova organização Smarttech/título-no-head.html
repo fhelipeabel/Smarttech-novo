@@ -1,0 +1,51 @@
+<!-- BRAND (logo + nome) — auto-contido -->
+<style>
+  /* Paleta (ajuste se quiser) */
+  :root{
+    --as-brand-primary: #0E4D7A; /* azul da logo */
+    --as-brand-accent:  #1BB3A7; /* teal da logo */
+  }
+
+  /* Wrapper do conjunto (linka para o topo por padrão) */
+  .as-brand{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+  }
+
+  /* Logo (troque o src abaixo pelo seu caminho real) */
+  .as-brand__logo{
+    height:40px; width:auto; display:block;
+  }
+
+  /* Nome ao lado da logo */
+  .as-brand__name{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: .2px;
+    color: var(--as-brand-primary);
+    white-space: nowrap;
+  }
+  .as-brand__name .as-accent{
+    color: var(--as-brand-accent);
+  }
+
+  /* Versão compacta opcional (use em telas muito estreitas) */
+  .as-brand--compact .as-brand__name{
+    font-size: 16px;
+  }
+
+  /* Responsivo: reduz levemente em <420px */
+  @media (max-width: 420px){
+    .as-brand__logo{ height:34px; }
+    .as-brand__name{ font-size:16px; }
+  }
+</style>
+
+  <span class="as-brand__name">
+    América <span class="as-accent">Smarttech</span>
+  </span>
+</a>
